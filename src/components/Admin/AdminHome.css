@@ -1,0 +1,14 @@
+
+
+.container{
+    margin: 20px;
+}
+.headline{
+    color: chocolate;
+}
+.description{
+    color: blueviolet;
+}
+.author{
+    color: darkviolet;
+}
