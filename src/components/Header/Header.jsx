@@ -77,7 +77,7 @@ const Header = () => {
   useEffect(() => {
     if (user && user.user) {
       const websocketProtocol = window.location.protocol === "https:" ? "wss://" : "ws://";
-      const wsURL = `ws://localhost:8000/ws/notification/${user.user.id}/`
+      const wsURL = `wss://rhbackend.robinjohnnvarghese.online/ws/notification/${user.user.id}/`
       const socket = new WebSocket(wsURL);
       console.log(wsURL);
   
@@ -144,6 +144,7 @@ const Header = () => {
               {/* <NavLink className='navbar__bottom__item' onClick={checkuser1}>Check</NavLink> */}
               {user.isAuthenticated ?  (
                 // <Link className='navbar__bottom__item' onClick={userLogout}>Logout</Link>
+                
                 <div className="navbar__bottom__item navbar__bottom__dropdown" onClick={toggleDropdown}>
                 <BiUser size={30} />
                 {showDropdown && (

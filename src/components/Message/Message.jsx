@@ -81,7 +81,7 @@ function Message() {
       const data = await createChatRoomApi(userId, cUserId);
       const accessToken = localStorage.getItem("access_token");
       const websocketProtocol = window.location.protocol === "https:" ? "wss://" : "ws://";
-      const wsUrl = `ws://127.0.0.1:8000/ws/chat/${data.id}/`
+      const wsUrl = `wss://rhbackend.robinjohnnvarghese.online/ws/chat/${data.id}/`
       const newChatWs = new WebSocket(wsUrl);
       setBg(true);
 
