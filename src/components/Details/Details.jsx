@@ -176,7 +176,7 @@ return images;
                 <tr>
                 <th scope='row'>Address and Zipcode</th>
                 <td colSpan={2}>{listing.address}</td>
-                <td>{listing.state}</td> */}
+                <td>{listing.state}</td> 
                 <td >{listing.zipcode}</td>
                 </tr>
                 <tr>
