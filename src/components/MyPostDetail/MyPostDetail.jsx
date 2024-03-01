@@ -86,7 +86,13 @@ const handleChange = (event) => {
     }));
   };
 
-
+  function ensureHttps(url) {
+    if (url.startsWith('http://')) {
+      return url.replace(/^http:\/\//i, 'https://');
+    }
+    return url;
+  }
+  
   const handleUpdate = async () => {
     try {
       console.log("************* Entered to try ***********************")
@@ -457,13 +463,15 @@ const handleChange = (event) => {
                                     listing.photo_main ? (
                                         <div className='listingdetail__display'>
                                             {/* <img className='listingdetail__display__image' src={selectedFile ? URL.createObjectURL(selectedFile):listing.photo_main */}
-                                            <img className='listingdetail__display__image' src={typeof listing.photo_main === 'string' ? listing.photo_main : URL.createObjectURL(listing.photo_main)} alt='' />
+                                            <img className='listingdetail__display__image' src={typeof listing.photo_main === 'string' ? ensureHttps(listing.photo_main) : URL.createObjectURL(listing.photo_main)} alt='' />
+                                            {/* <img className='listingdetail__display__image' src={typeof listing.photo_main === 'string' ? listing.photo_main : URL.createObjectURL(listing.photo_main)} alt='' /> */}
+
                                               {/* //  `${imageBaseUrl}${listing.photo_main}` */}
                                         </div>
                                     ) : null
                                 }
                             </div>
-                        </div>
+                        </div>                             
                         </MDBCol>
 
                         <MDBCol col='6'>
@@ -482,7 +490,9 @@ const handleChange = (event) => {
                                     listing.photo_1 ? (
                                         <div className='listingdetail__display'>
                                             {/* <img className='listingdetail__display__image' src={selectedFile1 ? URL.createObjectURL(selectedFile1): listing.photo_1} alt='' /> */}
-                                            <img className='listingdetail__display__image' src={typeof listing.photo_1 === 'string' ? listing.photo_1 : URL.createObjectURL(listing.photo_1)} alt='' />
+                                            <img className='listingdetail__display__image' src={typeof listing.photo_1 === 'string' ? ensureHttps(listing.photo_1) : URL.createObjectURL(listing.photo_1)} alt='' />
+
+                                            {/* <img className='listingdetail__display__image' src={typeof listing.photo_1 === 'string' ? listing.photo_1 : URL.createObjectURL(listing.photo_1)} alt='' /> */}
                                         </div>
                                     ) : null
                                 }
@@ -508,7 +518,9 @@ const handleChange = (event) => {
                                     listing.photo_2 ? (
                                         <div className='listingdetail__display'>
                                             {/* <img className='listingdetail__display__image' src={selectedFile2 ? URL.createObjectURL(selectedFile2):listing.photo_2} alt='' /> */}
-                                            <img className='listingdetail__display__image' src={typeof listing.photo_2 === 'string' ? listing.photo_2 : URL.createObjectURL(listing.photo_2)} alt='' />
+                                            <img className='listingdetail__display__image' src={typeof listing.photo_2 === 'string' ? ensureHttps(listing.photo_2) : URL.createObjectURL(listing.photo_2)} alt='' />
+
+                                            {/* <img className='listingdetail__display__image' src={typeof listing.photo_2 === 'string' ? listing.photo_2 : URL.createObjectURL(listing.photo_2)} alt='' /> */}
                                         </div>
                                     ) : null
                                 }
@@ -532,7 +544,9 @@ const handleChange = (event) => {
                                     listing.photo_3 ? (
                                         <div className='listingdetail__display'>
                                             {/* <img className='listingdetail__display__image' src={selectedFile3 ? URL.createObjectURL(selectedFile3):listing.photo_3} alt='' /> */}
-                                            <img className='listingdetail__display__image' src={typeof listing.photo_3 === 'string' ? listing.photo_3 : URL.createObjectURL(listing.photo_3)} alt='' />
+                                            <img className='listingdetail__display__image' src={typeof listing.photo_3 === 'string' ? ensureHttps(listing.photo_3) : URL.createObjectURL(listing.photo_3)} alt='' />
+
+                                            {/* <img className='listingdetail__display__image' src={typeof listing.photo_3 === 'string' ? listing.photo_3 : URL.createObjectURL(listing.photo_3)} alt='' /> */}
                                         </div>
                                     ) : null
                                 }
@@ -558,7 +572,9 @@ const handleChange = (event) => {
                                     listing.photo_4 ? (
                                         <div className='listingdetail__display'>
                                             {/* <img className='listingdetail__display__image' src={selectedFile4 ? URL.createObjectURL(selectedFile4):listing.photo_4} alt='' /> */}
-                                            <img className='listingdetail__display__image' src={typeof listing.photo_4 === 'string' ? listing.photo_4 : URL.createObjectURL(listing.photo_4)} alt='' />
+                                            <img className='listingdetail__display__image' src={typeof listing.photo_4 === 'string' ? ensureHttps(listing.photo_4) : URL.createObjectURL(listing.photo_4)} alt='' />
+
+                                            {/* <img className='listingdetail__display__image' src={typeof listing.photo_4 === 'string' ? listing.photo_4 : URL.createObjectURL(listing.photo_4)} alt='' /> */}
 
                                         </div>
                                     ) : null
@@ -583,7 +599,9 @@ const handleChange = (event) => {
                                     listing.photo_5 ? (
                                         <div className='listingdetail__display'>
                                             {/* <img className='listingdetail__display__image' src={selectedFile5 ? URL.createObjectURL(selectedFile5):listing.photo_5} alt='' /> */}
-                                            <img className='listingdetail__display__image' src={typeof listing.photo_5 === 'string' ? listing.photo_5 : URL.createObjectURL(listing.photo_5)} alt='' />
+                                            <img className='listingdetail__display__image' src={typeof listing.photo_5 === 'string' ? ensureHttps(listing.photo_5) : URL.createObjectURL(listing.photo_5)} alt='' />
+
+                                            {/* <img className='listingdetail__display__image' src={typeof listing.photo_5 === 'string' ? listing.photo_5 : URL.createObjectURL(listing.photo_5)} alt='' /> */}
 
                                         </div>
                                     ) : null
