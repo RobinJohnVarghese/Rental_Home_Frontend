@@ -30,7 +30,7 @@ const Details = (props) => {
     };
 
     fetchData();  }, [slug,user.accessToken]);
-
+   
   if (!listing) {
     return <div>Loading...
       <div>Please Login on More time</div>

@@ -43,7 +43,7 @@ const MyPostDetail = (props) => {
     list_date: new Date().toISOString(),
     // Add other fields as needed
   });
-  console.log('formData from listing',listing)
+  // console.log('formData from listing',listing)
 
 useEffect(() => {
     const fetchData = async () => {
@@ -119,6 +119,7 @@ const handleChange = (event) => {
       if (listing.photo_main instanceof File) {
         // If it's a File object (i.e., a newly uploaded file), append it directly
         formData.append('photo_main', listing.photo_main);
+        
       } else if (typeof listing.photo_main === 'string') {
         // If it's a string (i.e., an existing file URL), fetch the file and append it
         const response = await fetch(listing.photo_main);
