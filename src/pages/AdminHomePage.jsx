@@ -1,6 +1,6 @@
 
 import AdminHeader from '../components/AdminHeader/AdminHeader';
-import AdminHome from '../components/Admin/AdminHome';
+// import AdminHome from '../components/Admin/AdminHome';
 import { useSelector} from "react-redux";
 import { Navigate  } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ function AdminHomePage() {
     return (
       <div>
         <AdminHeader/>
-        <AdminHome/> 
+        {/* <AdminHome/>  */}
         
       </div>
     );
